@@ -1,0 +1,95 @@
+# config.yaml - Configuración Central del Proyecto
+# Proyecto: ML para Diagnóstico Temprano de Espasticidad
+
+project:
+  name: "Infant Spasticity Detection"
+  version: "1.0.0"
+  random_state: 42
+
+data:
+  raw_path: "FUENTE/kaggle_data"
+  processed_path: "data/processed"
+  samples:
+    - "100_50_50"
+    - "60_50_50"
+    - "40_50_50"
+  
+  split:
+    train_ratio: 0.6
+    val_ratio: 0.2
+    test_ratio: 0.2
+    stratify: true
+
+features:
+  optical_flow:
+    method: "farneback"
+    pyr_scale: 0.5
+    levels: 3
+    winsize: 15
+    iterations: 3
+    poly_n: 5
+    poly_sigma: 1.2
+  
+  temporal:
+    window_sizes: [10, 25, 50]
+    fps: 30
+    
+  spatial:
+    n_quadrants: 4
+    
+  pca:
+    n_components: 0.95
+    whiten: false
+
+preprocessing:
+  imputer:
+    strategy: "knn"
+    n_neighbors: 5
+  scaler: "standard"
+  outlier_detection:
+    method: "isolation_forest"
+    contamination: 0.05
+
+models:
+  logistic_regression:
+    solver: "lbfgs"
+    max_iter: 1000
+    multi_class: "multinomial"
+    
+  random_forest:
+    n_estimators: 100
+    n_jobs: -1
+    
+  svm:
+    kernel: "rbf"
+    probability: true
+    
+  xgboost:
+    objective: "multi:softprob"
+    eval_metric: "mlogloss"
+    use_label_encoder: false
+
+optimization:
+  method: "randomized"
+  n_iter: 50
+  cv_folds: 5
+  scoring: "roc_auc_ovr"
+  n_jobs: -1
+
+evaluation:
+  metrics:
+    - accuracy
+    - precision_macro
+    - recall_macro
+    - f1_macro
+    - roc_auc_ovr
+  
+  thresholds:
+    min_auc: 0.85
+    min_sensitivity: 0.90
+    min_specificity: 0.75
+
+output:
+  models_path: "models/"
+  reports_path: "reports/"
+  figures_path: "reports/figures/"

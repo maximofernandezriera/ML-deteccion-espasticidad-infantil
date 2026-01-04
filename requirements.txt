@@ -1,0 +1,33 @@
+# Requirements para Sistema de ML - Diagnóstico Espasticidad
+# Instalación: pip install -r requirements.txt
+
+# Core científico
+numpy>=1.21.0
+pandas>=1.3.0
+scipy>=1.7.0
+
+# Machine Learning
+scikit-learn>=1.0.0
+xgboost>=1.5.0
+
+# Procesamiento de video
+opencv-python>=4.5.0
+tqdm>=4.60.0
+
+# Visualización
+matplotlib>=3.4.0
+seaborn>=0.11.0
+
+# Interpretabilidad
+shap>=0.40.0
+
+# Configuración
+pyyaml>=5.4.0
+joblib>=1.0.0
+
+# Notebooks (opcional)
+jupyter>=1.0.0
+ipykernel>=6.0.0
+
+# Testing (opcional)
+pytest>=6.2.0
