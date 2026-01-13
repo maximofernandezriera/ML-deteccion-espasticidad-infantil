@@ -1,12 +1,10 @@
-# 🧠 Detección de Espasticidad Infantil mediante Machine Learning
+# 🧠 Aplicación de algoritmos de machine learning tradicional para el apoyo al diagnóstico temprano de espasticidad en recién nacidos
 
-> *Porque cada segundo cuenta en el diagnóstico temprano*
-
-Este proyecto nace de una idea simple pero poderosa: **utilizar la inteligencia artificial para ayudar a detectar espasticidad en bebés de forma temprana**, cuando la intervención terapéutica puede marcar la diferencia entre una vida con limitaciones y un desarrollo pleno.
+Mediante la **utilización la inteligencia artificial este proyecto pretende ayudar a detectar la espasticidad en los recién nacidos de forma temprana**.
 
 ## 🎯 ¿Por qué este proyecto?
 
-Este sistema analiza el datset y, mediante técnicas de Machine Learning, identifica patrones que pueden indicar riesgo de espasticidad. 
+Este sistema analiza el datset público de vídeo y, mediante técnicas de Machine Learning, identifica patrones que pueden indicar riesgo de espasticidad. Su objetivo es aproximarse al ojo clínico de un profesional especialista en el campo.
 
 ## 🛠️ ¿Cómo funciona?
 
@@ -74,4 +72,4 @@ Este proyecto está disponible como código abierto para fines educativos y de i
 
 ---
 
-*"La tecnología al servicio de los más pequeños"* 💙
+*"Tecnología al servicio de los pequeños por Máximo Fernández Riera"* 💙
