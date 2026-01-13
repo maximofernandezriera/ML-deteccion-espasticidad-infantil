@@ -6,19 +6,17 @@ Este proyecto nace de una idea simple pero poderosa: **utilizar la inteligencia 
 
 ## 🎯 ¿Por qué este proyecto?
 
-La espasticidad infantil es una condición que afecta el control muscular en niños pequeños. Un diagnóstico tardío puede significar perder la ventana crítica de neuroplasticidad, ese período mágico donde el cerebro infantil tiene una capacidad extraordinaria de adaptación.
-
-Este sistema analiza **videos de movimientos espontáneos** de bebés y, mediante técnicas de Machine Learning, identifica patrones que pueden indicar riesgo de espasticidad. 
+Este sistema analiza el datset y, mediante técnicas de Machine Learning, identifica patrones que pueden indicar riesgo de espasticidad. 
 
 ## 🛠️ ¿Cómo funciona?
 
 ```
-Video del bebé → Extracción de características → Modelo ML → Predicción de riesgo
+Dataset público → Extracción de características → Modelos ML → Predicción de riesgo
 ```
 
 El pipeline combina tres tipos de análisis:
 
-- **Flujo óptico**: Detecta cómo se mueve el bebé frame a frame
+- **Flujo óptico**: Detecta cómo es el movimiento frame a frame
 - **Características temporales**: Analiza la dinámica del movimiento a lo largo del tiempo
 - **Características espaciales**: Estudia la distribución del movimiento en diferentes partes del cuerpo
 
@@ -27,23 +25,6 @@ Cuatro modelos trabajan en conjunto para ofrecer predicciones robustas:
 - Random Forest
 - SVM (Support Vector Machine)
 - XGBoost
-
-## 📋 Requisitos
-
-```bash
-# Clonar el repositorio
-git clone https://github.com/maximofernandezriera/ML-deteccion-espasticidad-infantil.git
-cd ML-deteccion-espasticidad-infantil
-
-# Crear entorno virtual (recomendado)
-python -m venv venv
-source venv/bin/activate  # En Windows: venv\Scripts\activate
-
-# Instalar dependencias
-pip install -r requirements.txt
-```
-
-**Dependencias principales**:  NumPy, Pandas, Scikit-learn, XGBoost, OpenCV, SHAP
 
 ## 🚀 Uso
 
@@ -75,13 +56,13 @@ El sistema generará:
 ## 📊 Métricas de evaluación
 
 El sistema prioriza métricas clínicamente relevantes:
-- **Sensibilidad ≥ 90%**: Minimizar falsos negativos (no pasar por alto casos reales)
+- **Sensibilidad ≥ 90%**: Minimizar falsos negativos
 - **AUC-ROC ≥ 85%**: Capacidad discriminativa general
 - **Especificidad ≥ 75%**:  Reducir falsos positivos
 
 ## 🔬 Interpretabilidad
 
-No nos conformamos con un modelo "caja negra". Mediante **SHAP (SHapley Additive exPlanations)**, cada predicción viene acompañada de una explicación visual de qué características influyeron en el resultado.
+NMediante **SHAP (SHapley Additive exPlanations)**, cada predicción viene acompañada de una explicación visual de qué características influyeron en el resultado.
 
 ## 👨‍🎓 Contexto académico
 
