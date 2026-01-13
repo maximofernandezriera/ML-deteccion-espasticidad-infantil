@@ -60,7 +60,7 @@ El sistema prioriza métricas clínicamente relevantes:
 
 ## 🔬 Interpretabilidad
 
-NMediante **SHAP (SHapley Additive exPlanations)**, cada predicción viene acompañada de una explicación visual de qué características influyeron en el resultado.
+Mediante **SHAP (SHapley Additive exPlanations)**, cada predicción viene acompañada de una explicación visual de qué características influyeron en el resultado.
 
 ## 👨‍🎓 Contexto académico
 
